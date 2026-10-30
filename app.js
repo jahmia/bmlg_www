@@ -1,37 +1,29 @@
+const root = document.documentElement;
+const languageButton = document.querySelector('.language-toggle');
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.primary-nav');
-const languageButton = document.querySelector('.language-toggle');
-const root = document.documentElement;
 
 const translations = {
   en: {
     menuOpen: 'Open navigation',
     menuClose: 'Close navigation',
     switchLanguage: 'Passer en français',
-    homeTitle: 'BMLG Group — Real Estate & Property Services in New Brunswick',
-    privacyTitle: 'Privacy Policy — BMLG Group',
-    termsTitle: 'Terms of Service — BMLG Group',
-    description: 'BMLG Group is a New Brunswick real estate group connecting property ownership, rental operations, project management and building services.',
-    privacyDescription: 'Learn how BMLG Group handles personal information when you visit this website or contact our New Brunswick real estate group.',
-    termsDescription: 'Review the terms for using the BMLG Group website and its property, rental and building-services information.',
-    interestLabel: 'Interest',
-    nameLabel: 'Name',
-    emailLabel: 'Email',
+    pageTitle: 'BMLG Group — Real Estate & Property Services in New Brunswick',
+    description: 'BMLG Group brings property ownership, rental operations and building services together in New Brunswick.',
+    name: 'Name',
+    email: 'Email',
+    interest: 'Interest',
     formSuccess: 'Your email app should open with the consultation request ready to send.'
   },
   fr: {
     menuOpen: 'Ouvrir la navigation',
     menuClose: 'Fermer la navigation',
     switchLanguage: 'Switch to English',
-    homeTitle: 'BMLG Group — Immobilier et services immobiliers au Nouveau-Brunswick',
-    privacyTitle: 'Politique de confidentialité — BMLG Group',
-    termsTitle: 'Conditions d’utilisation — BMLG Group',
-    description: 'BMLG Group est un groupe immobilier du Nouveau-Brunswick qui réunit détention d’actifs, gestion locative, gestion de projets et services aux immeubles.',
-    privacyDescription: 'Découvrez comment BMLG Group traite les renseignements personnels lorsque vous visitez ce site ou communiquez avec le groupe.',
-    termsDescription: 'Consultez les conditions d’utilisation du site de BMLG Group et des renseignements sur ses services immobiliers.',
-    interestLabel: 'Sujet',
-    nameLabel: 'Nom',
-    emailLabel: 'Courriel',
+    pageTitle: 'BMLG Group — Immobilier et services immobiliers au Nouveau-Brunswick',
+    description: 'BMLG Group réunit détention immobilière, gestion locative et services aux immeubles au Nouveau-Brunswick.',
+    name: 'Nom',
+    email: 'Courriel',
+    interest: 'Sujet',
     formSuccess: 'Votre application de courriel devrait s’ouvrir avec la demande prête à envoyer.'
   }
 };
@@ -47,20 +39,10 @@ function setLanguage(language) {
   document.querySelectorAll('[data-en-placeholder][data-fr-placeholder]').forEach((element) => {
     element.placeholder = element.dataset[`${lang}Placeholder`];
   });
-  document.querySelectorAll('[data-en-alt][data-fr-alt]').forEach((element) => {
-    element.alt = element.dataset[`${lang}Alt`];
-  });
-  document.querySelectorAll('[data-en-aria-label][data-fr-aria-label]').forEach((element) => {
-    element.setAttribute('aria-label', element.dataset[`${lang}AriaLabel`]);
-  });
 
-  const legalPrivacy = document.body.classList.contains('legal-privacy');
-  const legalTerms = document.body.classList.contains('legal-terms');
-  document.title = legalPrivacy ? translations[lang].privacyTitle : legalTerms ? translations[lang].termsTitle : translations[lang].homeTitle;
+  document.title = translations[lang].pageTitle;
   const description = document.querySelector('meta[name="description"]');
-  if (description) {
-    description.content = legalPrivacy ? translations[lang].privacyDescription : legalTerms ? translations[lang].termsDescription : translations[lang].description;
-  }
+  if (description) description.content = translations[lang].description;
   if (navigation) navigation.setAttribute('aria-label', lang === 'fr' ? 'Navigation principale' : 'Main navigation');
   document.querySelectorAll('.brand[aria-label]').forEach((brand) => {
     brand.setAttribute('aria-label', lang === 'fr' ? 'Accueil BMLG Group' : 'BMLG Group home');
@@ -69,7 +51,7 @@ function setLanguage(language) {
     languageButton.setAttribute('aria-pressed', String(lang === 'fr'));
     languageButton.setAttribute('aria-label', translations[lang].switchLanguage);
   }
-  menuButton?.setAttribute('aria-label', menuButton.getAttribute('aria-expanded') === 'true' ? translations[lang].menuClose : translations[lang].menuOpen);
+  updateMenuLabel();
   try {
     localStorage.setItem('bmlg-language', lang);
   } catch {
@@ -77,21 +59,28 @@ function setLanguage(language) {
   }
 }
 
+function updateMenuLabel() {
+  if (!menuButton) return;
+  const lang = root.lang === 'fr' ? 'fr' : 'en';
+  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+  menuButton.setAttribute('aria-label', isOpen ? translations[lang].menuClose : translations[lang].menuOpen);
+}
+
 function closeMenu() {
   if (!menuButton || !navigation) return;
   menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', translations[root.lang]?.menuOpen || translations.en.menuOpen);
   navigation.classList.remove('is-open');
   document.body.classList.remove('menu-open');
+  updateMenuLabel();
 }
 
 if (menuButton && navigation) {
   menuButton.addEventListener('click', () => {
     const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!isOpen));
-    menuButton.setAttribute('aria-label', isOpen ? translations[root.lang].menuOpen : translations[root.lang].menuClose);
     navigation.classList.toggle('is-open', !isOpen);
     document.body.classList.toggle('menu-open', !isOpen);
+    updateMenuLabel();
   });
   navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
   document.addEventListener('keydown', (event) => {
@@ -123,36 +112,9 @@ if (contactForm) {
     const interest = contactForm.querySelector('#interest');
     const interestText = interest?.selectedOptions[0]?.textContent.trim() || String(data.get('interest'));
     const subject = encodeURIComponent(`${lang === 'fr' ? 'Demande BMLG Group' : 'BMLG Group enquiry'} — ${interestText}`);
-    const body = encodeURIComponent(`${translations[lang].nameLabel}: ${data.get('name')}\n${translations[lang].emailLabel}: ${data.get('email')}\n${translations[lang].interestLabel}: ${interestText}\n\n${data.get('message')}`);
+    const body = encodeURIComponent(`${translations[lang].name}: ${data.get('name')}\n${translations[lang].email}: ${data.get('email')}\n${translations[lang].interest}: ${interestText}\n\n${data.get('message')}`);
     const status = document.querySelector('#form-status');
     if (status) status.textContent = translations[lang].formSuccess;
     window.location.href = `mailto:contact@bmlggroup.com?subject=${subject}&body=${body}`;
   });
-}
-
-const parallaxItems = [...document.querySelectorAll('[data-parallax]')];
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-if (parallaxItems.length && !reduceMotion.matches) {
-  let ticking = false;
-  const updateParallax = () => {
-    const viewportHeight = window.innerHeight;
-    parallaxItems.forEach((item) => {
-      const rect = item.getBoundingClientRect();
-      if (rect.bottom < 0 || rect.top > viewportHeight) return;
-      const speed = Number(item.dataset.parallax) || 0.06;
-      const offset = (rect.top + rect.height / 2 - viewportHeight / 2) * speed;
-      const image = item.querySelector('img');
-      if (image) image.style.transform = `translate3d(0, ${Math.max(-24, Math.min(24, offset))}px, 0) scale(1.05)`;
-    });
-    ticking = false;
-  };
-  const requestParallax = () => {
-    if (!ticking) {
-      window.requestAnimationFrame(updateParallax);
-      ticking = true;
-    }
-  };
-  window.addEventListener('scroll', requestParallax, { passive: true });
-  window.addEventListener('resize', requestParallax);
-  requestParallax();
 }
