@@ -5,19 +5,23 @@ const root = document.documentElement;
 const translations = {
   en: {
     menuOpen: 'Open navigation', menuClose: 'Close navigation', switchLanguage: 'Passer en français',
-    homeTitle: 'BMLG Group — Renting & Construction in New Brunswick',
+    homeTitle: 'BMLG Group — Real Estate, Property & Construction in New Brunswick',
     privacyTitle: 'Privacy Policy — BMLG Group', termsTitle: 'Terms of Service — BMLG Group',
-    description: 'BMLG Group is a New Brunswick-based renting and construction group. Contact us to discuss rental and building enquiries.',
+    description: 'BMLG Group is a New Brunswick real estate holding company bringing together property ownership, rental operations, project management and construction services.',
+    privacyDescription: 'Read how BMLG Group handles personal information when you visit the website or contact our New Brunswick real estate group.',
+    termsDescription: 'Review the terms for using the BMLG Group website and its property, rental, and construction information.',
     interestLabel: 'Interest', nameLabel: 'Name', emailLabel: 'Email', messageLabel: 'Message',
-    formSuccess: 'Your email app should open with the enquiry ready to send.'
+    formSuccess: 'Your email app should open with the consultation request ready to send.'
   },
   fr: {
     menuOpen: 'Ouvrir la navigation', menuClose: 'Fermer la navigation', switchLanguage: 'Switch to English',
-    homeTitle: 'BMLG Group — Location et construction au Nouveau-Brunswick',
+    homeTitle: 'BMLG Group — Immobilier, gestion et construction au Nouveau-Brunswick',
     privacyTitle: 'Politique de confidentialité — BMLG Group', termsTitle: 'Conditions d’utilisation — BMLG Group',
-    description: 'BMLG Group est une entreprise de location et de construction établie au Nouveau-Brunswick. Communiquez avec nous pour vos demandes.',
+    description: 'BMLG Group est une société de portefeuille immobilier du Nouveau-Brunswick qui réunit détention d’actifs, gestion locative, gestion de projets et services de construction.',
+    privacyDescription: 'Découvrez comment BMLG Group traite les renseignements personnels lorsque vous visitez le site ou communiquez avec notre groupe immobilier.',
+    termsDescription: 'Consultez les conditions d’utilisation du site de BMLG Group et de ses renseignements immobiliers, locatifs et de construction.',
     interestLabel: 'Sujet', nameLabel: 'Nom', emailLabel: 'Courriel', messageLabel: 'Message',
-    formSuccess: 'Votre application de courriel devrait s’ouvrir avec le message prêt à envoyer.'
+    formSuccess: 'Votre application de courriel devrait s’ouvrir avec la demande de consultation prête à envoyer.'
   }
 };
 
@@ -34,13 +38,22 @@ function setLanguage(language) {
   document.querySelectorAll('[data-en-alt][data-fr-alt]').forEach((element) => {
     element.alt = element.dataset[`${lang}Alt`];
   });
+  document.querySelectorAll('[data-en-aria-label][data-fr-aria-label]').forEach((element) => {
+    element.setAttribute('aria-label', element.dataset[`${lang}AriaLabel`]);
+  });
   document.title = document.body.classList.contains('legal-privacy')
     ? translations[lang].privacyTitle
     : document.body.classList.contains('legal-terms')
       ? translations[lang].termsTitle
       : translations[lang].homeTitle;
   const description = document.querySelector('meta[name="description"]');
-  if (description) description.content = translations[lang].description;
+  if (description) {
+    description.content = document.body.classList.contains('legal-privacy')
+      ? translations[lang].privacyDescription
+      : document.body.classList.contains('legal-terms')
+        ? translations[lang].termsDescription
+        : translations[lang].description;
+  }
   const pageNavigation = document.querySelector('#primary-nav');
   if (pageNavigation) pageNavigation.setAttribute('aria-label', lang === 'fr' ? 'Navigation principale' : 'Main navigation');
   document.querySelectorAll('.brand[aria-label]').forEach((brand) => {
