@@ -23,7 +23,7 @@ const copy = {
     homeTitle: 'BMLG Group | L’immobilier, avec intention',
     privacyTitle: 'Confidentialité | BMLG Group',
     termsTitle: 'Conditions d’utilisation du service | BMLG Group',
-    homeDescription: 'BMLG Group réunit détention immobilière, gestion locative et services aux immeubles au Nouveau-Brunswick.',
+    homeDescription: 'BMLG Group réunit détention immobilière, gestion locative et services aux immeubles au New Brunswick.',
     privacyDescription: 'Comment BMLG Group recueille et utilise les renseignements lorsque vous utilisez ses services de messagerie texte.',
     termsDescription: 'Conditions d’utilisation du service de messagerie texte de BMLG Group.',
     formSent: 'Votre application de courriel devrait s’ouvrir avec le message prêt à envoyer.'
