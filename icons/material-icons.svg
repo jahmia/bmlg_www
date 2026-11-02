@@ -1,0 +1,15 @@
+<!-- Material Icons from google/material-design-icons, licensed under Apache 2.0. -->
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="arrow-forward" viewBox="0 0 24 24">
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+  </symbol>
+  <symbol id="arrow-downward" viewBox="0 0 24 24">
+    <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"/>
+  </symbol>
+  <symbol id="arrow-upward" viewBox="0 0 24 24">
+    <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+  </symbol>
+  <symbol id="mail" viewBox="0 0 24 24">
+    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+  </symbol>
+</svg>
