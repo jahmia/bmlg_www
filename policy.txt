@@ -1,39 +1,118 @@
 Privacy Policy
-Effective Date: November 3rd, 2026
 
-Thank you for using our text number services. We value your privacy, and this policy outlines how we handle your data.
+Last Updated: November 16, 2026
+
+BMLG Group ("BMLG," "we," "us," or "our") is committed to protecting the privacy and security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you visit our websites, use our online portals, interact with our property management services, or communicate with us (including by text message / SMS).
+By using our websites, portals, or services, or by providing your personal information to us, you consent to the practices described in this Privacy Policy.
 
 1. Information We Collect
-Mobile Phone Number: While on our website, through online applications, maintenance requests, showing requests, Tenant Web Access registration, site reservations, or general informational request forms we may collect your phone number to send and receive text messages.
-User-Provided Information: Any additional information you provide helps us improve our services and provide better support.
+You may browse certain parts of our websites without providing personal information. However, we collect information in the following ways:
+
+1.1 Information You Provide Directly
+You may voluntarily provide personal information when you:
+-  Request information, schedule a showing, or contact us through website forms
+-  Submit a rental application, maintenance request, or guest card
+-  Create an account or register for Tenant Web Access / Owner portals
+-  Subscribe to newsletters or marketing communications
+-  Participate in surveys or provide feedback
+-  Communicate with us by email, phone, or text message
+This information may include your name, email address, phone number (including mobile), mailing address, date of birth, employment information, rental history, and other details relevant to your request or tenancy.
+
+1.2 Mobile Phone Numbers and Text Messaging
+When you provide a mobile phone number through our website, portals, applications, or other forms, we may use that number to send and receive text messages related to our property management services. This may include account-related alerts, maintenance updates, lease reminders, community news, urgent notifications, and other service-related communications.
+Important: No mobile information will be shared with third parties or affiliates for their marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.
+
+1.3 Information Collected Automatically
+When you visit our websites or use our portals, certain technical information may be collected automatically, including:
+-  IP address
+-  Browser type and device information
+-  Pages visited, time spent, and navigation paths
+-  Referring websites or search engines
+This information helps us understand how visitors use our sites, improve functionality, and enhance user experience. We may also use cookies and similar technologies (see Section 4).
 
 2. How We Use Your Information
-We use your data to:
-- Deliver text messages and updates related to our services.
-- Improve our services and user experience.
-- Respond to your inquiries and provide customer support.
-- Occasionally send alerts, communication about community news, urgent notifications, events, and other content.
+We use the information we collect for purposes including:
+-  Responding to inquiries, showing requests, and applications
+-  Managing tenancies, leases, maintenance, and owner communications
+-  Sending service-related text messages, emails, and notifications (where consent has been obtained)
+-  Creating and managing customer accounts or portal access
+-  Sending newsletters, promotional communications, and updates (where permitted by law and with appropriate consent)
+-  Personalizing website content and improving our services
+-  Conducting internal analytics, reporting, and quality assurance
+-  Detecting and preventing fraud or misuse
+-  Complying with legal and regulatory obligations
+We may generate aggregated or anonymized reports about website usage or market trends. These reports do not identify individuals.
 
-3. Message Content
-Messages may include alerts, communication about community news, urgent notifications, events, and other content. Standard messaging rates may apply. Message frequency will vary.
-Operators are not liable for any delayed or undelivered messages.
+3. Text Messaging (SMS) Communications
+When you provide your mobile number and consent to receive text messages, we may send messages related to:
+-  Account and tenancy updates (maintenance status, lease renewals, payment reminders, etc.)
+-  Community news, urgent notifications, and events
+-  Responses to inquiries you initiate
+Consent: By providing your phone number and agreeing to the consent language presented on our forms or portals, you consent to receive text messages from BMLG for the purposes described above. Message and data rates may apply. Message frequency will vary.
+Opt-Out: You may opt out at any time by replying STOP to any message. Reply HELP for more information. You may also contact us directly to request removal from text communications.
+We honour opt-out requests promptly. Text messaging originator opt-in data and consent are not shared with third parties for marketing purposes.
 
-4. Data Security
-We take reasonable steps to protect your personal information from unauthorized access and disclosure. However, no data transmission over the internet or method of electronic storage is 100% secure, and we cannot guarantee the absolute security of your information.
-No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+4. Cookies and Tracking Technologies
+Our websites use cookies and similar technologies to enhance functionality and analyze traffic. Cookies help us:
+-  Recognize returning visitors
+-  Understand website usage patterns
+-  Personalize content and experiences
+You may modify your browser settings to refuse cookies or receive notifications when cookies are used. Disabling cookies may affect certain website features.
+We may use third-party analytics tools to better understand how visitors interact with our websites.
 
-5. Opt-Out
-You can opt out of our messages at any time by replying "STOP" to a message. Reply "HELP" for more information.
+5. Third-Party Services
+Some services on our websites or platforms may be provided by third parties, including:
+-  Property management software and portals (e.g., Rent Manager)
+-  Payment processors
+-  Email and SMS delivery providers
+-  Analytics and website performance tools
+-  Identity verification or credit-check partners (where applicable)
+These providers may collect or process information on our behalf solely to support the services we offer. We take reasonable steps to ensure they handle personal information in accordance with applicable privacy laws and appropriate contractual safeguards.
+We do not sell or rent personal information, and we do not share mobile numbers or SMS consent data with third parties for their own marketing purposes.
 
-6. Contact Us
-For questions or concerns about your data, please contact us at:
-Phone: 506-717-6617
+6. Disclosure of Information
+BMLG Group does not sell or rent personal information to third parties.
+We may disclose personal information in limited circumstances, including:
+-  To service providers who assist in operating our websites, portals, or delivering services (under confidentiality obligations)
+-  To comply with applicable laws, regulations, legal processes, or government requests
+-  To protect the rights, safety, or property of BMLG, our residents, owners, or partners
+-  As part of a business transaction such as a merger, acquisition, or asset transfer (subject to appropriate protections)
+-  With your consent or at your direction
+Any information shared for operational purposes is handled under appropriate confidentiality and data-protection obligations.
+
+7. Data Security
+We take reasonable technical and organizational measures to protect personal information against loss, misuse, unauthorized access, disclosure, or alteration. These measures include:
+-  Secure server infrastructure and firewalls
+-  Encryption technologies (HTTPS / SSL)
+-  Controlled internal access to personal information
+-  Employee training and confidentiality obligations
+No method of transmission over the Internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.
+
+8. Data Retention
+We retain personal information only for as long as necessary to fulfill the purposes described in this Privacy Policy, comply with legal obligations, resolve disputes, and enforce agreements.
+When personal information is no longer required, we take reasonable steps to securely delete or anonymize it.
+
+9. Your Privacy Rights (PIPEDA and Applicable Law)
+BMLG Group complies with the Personal Information Protection and Electronic Documents Act (PIPEDA) and other applicable Canadian privacy laws.
+Under Canadian privacy law, you generally have the right to:
+-  Access the personal information we hold about you
+-  Request correction of inaccurate or incomplete information
+-  Withdraw consent to the collection, use, or disclosure of your personal information (subject to legal or contractual restrictions and reasonable notice)
+-  Request information about how your personal information is collected, used, and disclosed
+To exercise these rights, please contact us using the information in Section 12. We will respond within a reasonable timeframe in accordance with applicable law.
+If you believe your privacy rights have not been respected, you may contact the Office of the Privacy Commissioner of Canada.
+
+10. Marketing Communications
+If you receive marketing emails from us, you may unsubscribe at any time by using the unsubscribe link included in those messages.
+For text messages, reply STOP to opt out or contact us directly.
+
+11. Changes to This Privacy Policy
+BMLG Group may update this Privacy Policy from time to time to reflect operational, legal, or regulatory changes. Any updates will be posted on this page with an updated "Last Updated" date. Your continued use of our websites or services after changes are posted constitutes acceptance of the revised Policy.
+
+12. Contact Information
+If you have questions about this Privacy Policy or how your personal information is handled, or if you wish to exercise your privacy rights, please contact:
+BMLG Group
 Email: propertymanagement@bmlggroup.com
+Phone: 506-717-6617
 
-7. CTIA Compliance
-Our services comply with CTIA guidelines. To report concerns or violations, contact us using the provided information.
-
-8. Changes to Policy
-We may update this Privacy Policy from time to time to reflect changes in our data practices or legal requirements. We will notify you of any material changes to this Privacy Policy by posting the updated version on our website or through other means. Your continued use of the Service after such changes constitutes your acceptance of the revised Privacy Policy.
-© [2026] [BMLG GROUP]. All rights reserved.
-
+We encourage you to contact us first so we can address your concerns. You also have the right to contact the Office of the Privacy Commissioner of Canada.
