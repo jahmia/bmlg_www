@@ -41,6 +41,12 @@ function setLanguage(language) {
   const lang = language === 'fr' ? 'fr' : 'en';
   html.lang = lang;
   html.dataset.lang = lang;
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const destination = new URL(link.href, window.location.href);
+    if (destination.origin !== window.location.origin || destination.pathname === window.location.pathname) return;
+    destination.searchParams.set('lang', lang);
+    link.href = destination.href;
+  });
   document.querySelectorAll('[data-en][data-fr]').forEach((element) => {
     element.innerHTML = element.dataset[lang];
   });
@@ -102,11 +108,14 @@ languageButton?.addEventListener('click', () => {
   setLanguage(html.lang === 'en' ? 'fr' : 'en');
 });
 
-let preferredLanguage = 'en';
-try {
-  preferredLanguage = localStorage.getItem('bmlg-language') || 'en';
-} catch {
-  // English is the default when browser storage is unavailable.
+const requestedLanguage = new URLSearchParams(window.location.search).get('lang');
+let preferredLanguage = requestedLanguage === 'en' || requestedLanguage === 'fr' ? requestedLanguage : 'en';
+if (requestedLanguage !== 'en' && requestedLanguage !== 'fr') {
+  try {
+    preferredLanguage = localStorage.getItem('bmlg-language') || 'en';
+  } catch {
+    // English is the default when browser storage is unavailable.
+  }
 }
 setLanguage(preferredLanguage);
 
