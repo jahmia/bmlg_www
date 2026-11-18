@@ -10,10 +10,10 @@ const copy = {
     language: 'Passer en français',
     homeTitle: 'BMLG Group | Real estate, built with purpose',
     privacyTitle: 'Privacy | BMLG Group',
-    termsTitle: 'Terms of Service | BMLG Group',
+    termsTitle: 'Terms of Use | BMLG Group',
     homeDescription: 'BMLG Group connects real estate ownership, property operations and building services across New Brunswick.',
-    privacyDescription: 'How BMLG Group collects and uses information when you use its text messaging services.',
-    termsDescription: 'Terms for using the BMLG Group text messaging service.',
+    privacyDescription: 'How BMLG Group collects, uses, discloses, and safeguards personal information.',
+    termsDescription: 'Terms of use for the websites and digital services of BMLG Group.',
     formSent: 'Your email app should open with the message ready to send.'
   },
   fr: {
@@ -24,8 +24,8 @@ const copy = {
     privacyTitle: 'Confidentialité | BMLG Group',
     termsTitle: 'Conditions d’utilisation du service | BMLG Group',
     homeDescription: 'BMLG Group réunit détention immobilière, gestion locative et services aux immeubles au New Brunswick.',
-    privacyDescription: 'Comment BMLG Group recueille et utilise les renseignements lorsque vous utilisez ses services de messagerie texte.',
-    termsDescription: 'Conditions d’utilisation du service de messagerie texte de BMLG Group.',
+    privacyDescription: 'Comment BMLG Group recueille, utilise, divulgue et protège les renseignements personnels.',
+    termsDescription: 'Conditions d’utilisation des sites Web et services numériques de BMLG Group.',
     formSent: 'Votre application de courriel devrait s’ouvrir avec le message prêt à envoyer.'
   }
 };
