@@ -3,6 +3,7 @@
   --night: #031926;
   --deep: #183a40;
   --ocean: #468189;
+  /* --ocean: #4169E1; */
   --leaf: #77aca2;
   --mist: #9dbebb;
   --sand: #f4e9cd;
@@ -142,7 +143,7 @@ a.row-arrow:hover { background: var(--night); color: var(--sand); }
 .work-facts { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(28px, 5vw, 65px); }
 .work-partner { color: var(--mist); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
 .work-stats { display: grid; width: 100%; grid-template-columns: 1fr 1fr; margin: 6px 0 21px; padding: 16px 0; border-block: 1px solid #ffffff3b; }
-.work-stats > div { display: flex; flex-direction: column; gap: 2px; }
+.work-stats > div { display: flex; flex-direction: row; gap: 3px; }
 .work-stats strong { color: var(--sand); font: 500 39px/1.1 var(--sans); }
 .work-stats span { color: #c2d2ce; font-size: 12px; }
 .work-description { margin: 0 0 17px; color: #dce5df; font-size: 14px; line-height: 1.8; }
